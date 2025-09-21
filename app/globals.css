@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@theme {
+  --color-primary: #f47428;
+  --color-secondary: #171b28;
+  --color-light: #f9a474;
+}
+a:hover {
+  text-decoration: none;
+}
+.head_title a {
+  font-size: 18px;
+  font-weight: 500;
+}
+.head_title a:hover {
+  color: var(--color-primary);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-pagination-bullet {
+  background: #d1d5db;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-primary) !important;
+}
+.animate-slide {
+  animation: slide 20s linear infinite;
+  width: max-content;
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.overlay {
+  transform: translateX(-100%);
+}
+
+.group:hover .overlay {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.group:not(:hover) .overlay {
+  animation: slideOutRight 0.5s forwards;
+}
+@keyframes dash {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 20px;
+  }
+}
+
+.animate-dash {
+  background-image: radial-gradient(orange 1px, transparent 1px);
+  background-size: 3px 10px;
+  background-repeat: repeat-y;
+  background-color: transparent;
+  animation: dash 1s linear infinite;
+}
+
+@media only screen and (max-width: 600px) {
+  .media_link {
+    font-size: 12px !important;
+  }
+}
