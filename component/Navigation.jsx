@@ -4,9 +4,16 @@ import { MapPin, Mail, Phone, Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const handleMobileNavigation = (href) => {
+    setIsOpen(false);
+    router.push(href);
+  };
 
   const menuItems = [
     { href: "/", label: "Home" },
@@ -118,9 +125,17 @@ export default function Navigation() {
           </button>
         </div>
 
+        {/* Overlay */}
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-black/40 z-40"
+            onClick={() => setIsOpen(false)}
+          />
+        )}
+
         {/* Mobile Sidebar */}
         <div
-          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-40 ${
+          className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -134,29 +149,25 @@ export default function Navigation() {
           <ul className="flex flex-col gap-5 p-5 text-secondary">
             {menuItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} onClick={() => setIsOpen(false)}>
+                <button 
+                  onClick={() => handleMobileNavigation(item.href)}
+                  className="text-left"
+                >
                   {item.label}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
 
           <div className="p-5">
-            <Link href="/quote" onClick={() => setIsOpen(false)}>
-              <button className="w-full bg-primary text-white py-3 rounded">
-                Get A Quote
-              </button>
-            </Link>
+            <button 
+              onClick={() => handleMobileNavigation("/quote")}
+              className="w-full bg-primary text-white py-3 rounded"
+            >
+              Get A Quote
+            </button>
           </div>
         </div>
-
-        {/* Overlay  bg-black/40*/}
-        {isOpen && (
-          <div
-            className="fixed inset-0  z-50"
-            onClick={() => setIsOpen(false)}
-          />
-        )}
       </div>
     </>
   );
