@@ -105,14 +105,14 @@ export default function Brokerage() {
 
               <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3">
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+1 (205) 852-6534"
                   className="inline-flex items-center justify-center rounded-full px-5 py-2.5 bg-primary text-white font-medium shadow hover:bg-light"
                 >
                   Call Us
                 </a>
 
                 <a
-                  href="mailto:info@muvitexpress.com?subject=Brokerage%20Terms%20Inquiry"
+                  href="mailto:admin@cheaphualing.net?subject=Brokerage%20Terms%20Inquiry"
                   className="inline-flex items-center justify-center rounded-full px-5 py-2.5 border border-slate-200  bg-primary text-white font-medium hover:bg-light  shadow-sm"
                 >
                   Email a Representative
