@@ -93,7 +93,7 @@ export async function POST(request) {
 // Send confirmation email to customer
 async function sendCustomerConfirmationEmail(formData, orderId) {
   const customerMailOptions = {
-    from: process.env.SMTP_FROM || 'noreply@aaanav.com',
+    from: process.env.SMTP_FROM || 'admin@cheaphualing.net',
     to: formData.Email,
     subject: `Contract Confirmation - Order ID: ${orderId}`,
     html: `
@@ -157,8 +157,8 @@ async function sendCustomerConfirmationEmail(formData, orderId) {
 // Send notification to admin
 async function sendAdminNotification(formData, orderId, systemInfo) {
   const adminMailOptions = {
-    from: process.env.SMTP_FROM || 'noreply@aaanav.com',
-    to: process.env.ADMIN_EMAIL || 'dev.aleahmad@gmail.com',
+    from: process.env.SMTP_FROM || 'admin@cheaphualing.net',
+    to: process.env.ADMIN_EMAIL || 'admin@cheaphualing.net',
     subject: `🚨 New Contract Submission - Order ID: ${orderId}`,
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
