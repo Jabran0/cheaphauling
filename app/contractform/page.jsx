@@ -406,7 +406,7 @@ export default function StepForm() {
       },
       {
         title: "7. Cancellation & Refund Policy",
-        text: "If the customer cancels before a carrier is assigned, they will receive a full refund of their deposit. If the vehicle has been assigned to a carrier (dispatched), Cheap Hauling retains the right to charge a partial service fee equal to the deposit amount.Cheap Hauling may refuse an order at any time, in which case a full refund will be issued.Once the customer has signed the contract with Muvitxpress, and should they engage with other companies for the same order during the interim period, Muvitxpress reserves the right to request a deposit to secure the commitment and resources required to proceed with the project.",
+        text: "If the customer cancels before a carrier is assigned, they will receive a full refund of their deposit. If the vehicle has been assigned to a carrier (dispatched), Cheap Hauling retains the right to charge a partial service fee equal to the deposit amount.Cheap Hauling may refuse an order at any time, in which case a full refund will be issued.Once the customer has signed the contract with Cheap Hauling Transport, and should they engage with other companies for the same order during the interim period, Cheap Hauling reserves the right to request a deposit to secure the commitment and resources required to proceed with the project.",
       },
       {
         title: "8. Carrier Liability & Insurance",
@@ -858,9 +858,9 @@ export default function StepForm() {
                     equal to the deposit amount. <br /> Cheap Hauling may refuse
                     an order at any time, in which case a full refund will be
                     issued. <br /> Once the customer has signed the contract
-                    with Muvitxpress, and should they engage with other
+                    with Cheap Hauling  and should they engage with other
                     companies for the same order during the interim period,
-                    Muvitxpress reserves the right to request a deposit to
+                    Cheap Hauling reserves the right to request a deposit to
                     secure the commitment and resources required to proceed with
                     the project.{" "}
                   </p>{" "}
